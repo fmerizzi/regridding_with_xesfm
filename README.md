@@ -69,7 +69,7 @@
   output = regridder(era5_data)
   
   # Save the output to a NetCDF file with chunked write, managed by Dask
-  output.to_netcdf("/mnt/DATA2/regriddedERA5_wind_speed_1991_2000.nc", compute=True)
+  output.to_netcdf("regriddedERA5_wind_speed_1991_2000.nc", compute=True)
   ```
   
   This setup should now allow efficient regridding of large datasets while keeping memory usage in check.
